@@ -92,6 +92,24 @@ async def ping(ctx):
     					 description=str(ping.microseconds / 1000.0) + ' ms',
                          color=0x00ffff)
     await bot.say(embed=pong)
+    
+runSpam = true
+
+async def spamLoop(ctx):
+    """Pong! Check your response time."""
+    while runSpam :
+        await bot.say("spam")
+
+@bot.command(pass_context=True)
+async def startspam(ctx):
+    """Pong! Check your response time."""
+    runSpam = true
+    spamLoop(ctx)
+    
+@bot.command(pass_context=True)
+async def stopspam(ctx):
+    """Pong! Check your response time."""
+    runSpam = false
 
 @bot.command(pass_context=True)
 async def shutdown(ctx):
