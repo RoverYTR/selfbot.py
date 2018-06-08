@@ -4,6 +4,7 @@ from discord.ext import commands
 from contextlib import redirect_stdout
 import datetime
 import json
+import time
 import inspect
 import os
 import glob
@@ -98,6 +99,7 @@ runSpam = true
 async def spamLoop(ctx):
     """Pong! Check your response time."""
     while runSpam :
+        time.sleep(2)
         await bot.say("spam")
 
 @bot.command(pass_context=True)
