@@ -2,7 +2,7 @@
   "name": "selfbot.py",
   "description": "discord selfbot",
   "website": "http://selfbot-py.tk",
-  "repository": "https://github.com/verixx/selfbot.py",
+  "repository": "https://github.com/Rapptz/discord.py",
   "env": {
     "TOKEN": {
         "description": "Discord token used to log in",
