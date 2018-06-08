@@ -72,12 +72,11 @@ class Misc():
             await self.bot.say(embed=emb)
         else:
             await self.bot.say('Usage: `.embedsay [message]`')
-            
-    @commands.command(pass_context=True)
-    async def startSpam(self,ctx, *, message: str = None):
-        '''Embed something as the bot.'''
+			
+	@commands.command()
+    async def spam(self):
         await self.bot.say('spam')
-
+            
     @commands.command()
     async def add(self,*args):
         '''Add multiple numbers.'''
