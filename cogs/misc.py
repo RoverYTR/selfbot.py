@@ -47,6 +47,7 @@ class Misc():
                      'Don\'t count on it', 'My reply is no', 'My sources say no', 'Outlook not so good',
                      'Very doubtful']
         self.selfroles = ['Subscriber','Hype']
+        self.runSpam = true
 
     async def send_cmd_help(self,ctx):
         if ctx.invoked_subcommand:
@@ -71,8 +72,32 @@ class Misc():
             await self.bot.say(embed=emb)
         else:
             await self.bot.say('Usage: `.embedsay [message]`')
+            
+    @commands.command(pass_context=True)
+    async def startSpam(self,ctx, *, message: str = None):
+        '''Embed something as the bot.'''
+        await self.bot.say('spam')
 
+#     async def spamLoop(ctx):
+#         """Pong! Check your response time."""
+#         if !runSpam :
+#             await bot.say("runSpam not available")
+#         else:
+#             while runSpam :
+#                 time.sleep(2)
+#                 await bot.say("spam")
 
+#     @bot.command(pass_context=True)
+#     async def startspam(ctx):
+#         """Pong! Check your response time."""
+#         runSpam = true
+#         spamLoop(ctx)
+
+#     @bot.command(pass_context=True)
+#     async def stopspam(ctx):
+#         """Pong! Check your response time."""
+#         runSpam = false
+    
     @commands.command()
     async def add(self,*args):
         '''Add multiple numbers.'''
