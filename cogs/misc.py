@@ -78,26 +78,6 @@ class Misc():
         '''Embed something as the bot.'''
         await self.bot.say('spam')
 
-#     async def spamLoop(ctx):
-#         """Pong! Check your response time."""
-#         if !runSpam :
-#             await bot.say("runSpam not available")
-#         else:
-#             while runSpam :
-#                 time.sleep(2)
-#                 await bot.say("spam")
-
-#     @bot.command(pass_context=True)
-#     async def startspam(ctx):
-#         """Pong! Check your response time."""
-#         runSpam = true
-#         spamLoop(ctx)
-
-#     @bot.command(pass_context=True)
-#     async def stopspam(ctx):
-#         """Pong! Check your response time."""
-#         runSpam = false
-    
     @commands.command()
     async def add(self,*args):
         '''Add multiple numbers.'''
