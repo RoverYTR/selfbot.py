@@ -99,9 +99,12 @@ runSpam = true
 
 async def spamLoop(ctx):
     """Pong! Check your response time."""
-    while runSpam :
-        time.sleep(2)
-        await bot.say("spam")
+    if !runSpam :
+        await bot.say("runSpam not available")
+    else:
+        while runSpam :
+            time.sleep(2)
+            await bot.say("spam")
 
 @bot.command(pass_context=True)
 async def startspam(ctx):
