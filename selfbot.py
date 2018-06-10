@@ -102,7 +102,7 @@ async def spammed(ctx):
     await bot.say("Hi There!")
     time.sleep(2)
     for i in range (0,10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000):
-        await bot.say("")
+        await bot.say("spam")
 
     
 @bot.command(pass_context=True)
