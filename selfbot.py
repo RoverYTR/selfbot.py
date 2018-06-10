@@ -94,8 +94,15 @@ async def ping(ctx):
                          color=0x00ffff)
     await bot.say(embed=pong)
     
+@bot.command(pass_context=True)
+async def spam(message, args):
+    msg = ' '.join(args) if args else Settings.SPAM_MSG
+    msg = Utils.escape(msg)
+    for i in range(Settings.SPAM_CNT):
+    await client.send_message(message.channel, msg)
+    await asyncio.sleep(Settings.SPAM_DELAY)
 
-
+    
 @bot.command(pass_context=True)
 async def shutdown(ctx):
     """Restarts the selfbot."""
