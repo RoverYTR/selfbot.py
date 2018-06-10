@@ -98,12 +98,11 @@ async def ping(ctx):
     await bot.say(embed=pong)
     
 @bot.command(pass_context=True)
-async def spam(message, args):
-    msg = ' '.join(args) if args else Settings.SPAM_MSG
-    msg = Utils.escape(msg)
-    for i in range(Settings.SPAM_CNT):
-    await client.send_message(message.channel, msg)
-    await asyncio.sleep(Settings.SPAM_DELAY)
+async def spammed(ctx):
+    await bot.say("Hi There!")
+    time.sleep(2)
+    for i in range (0,10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000):
+        await bot.say("")
 
     
 @bot.command(pass_context=True)
